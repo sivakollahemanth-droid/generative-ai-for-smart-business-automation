@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generative AI for Smart Business Automation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Generative AI for Smart Business Automation</h1>
+      <p>Automate everyday business tasks using generative AI.</p>
+    </header>
+
+    <main class="card">
+      <label for="taskType">Choose an automation task</label>
+      <select id="taskType">
+        <option value="email">Draft a Business Email</option>
+        <option value="summary">Summarize a Report / Document</option>
+        <option value="meeting_notes">Generate Meeting Notes</option>
+        <option value="workflow">Suggest Process Automation</option>
+      </select>
+
+      <label for="inputText">Task details</label>
+      <textarea
+        id="inputText"
+        rows="8"
+        placeholder="E.g. 'Write a follow-up email to a client about a delayed shipment' or paste your report text here..."
+      ></textarea>
+
+      <button id="generateBtn">Generate</button>
+
+      <div id="statusMsg" class="status"></div>
+
+      <section id="resultSection" class="result hidden">
+        <h2>Result</h2>
+        <pre id="resultText"></pre>
+        <button id="copyBtn">Copy to clipboard</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Base project — extend with new task types, auth, or storage as needed.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
